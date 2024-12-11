@@ -1,6 +1,6 @@
 # Blog Site - Simple CRUD Operations
 
-This project is a blog application built with **Node.js**, **Express.js**, and **MySQL**. Users can create, update, delete, and view blog posts. Additionally, there is an **Admin Panel** where admin users can add, edit, and delete users.
+This project is a blog application built with Node.js, Express.js, and MySQL. It is designed to perform CRUD operations. Only administrators with user accounts can add, update, or delete blogs and users.
 
 ## Getting Started
 
