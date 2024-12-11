@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+	<%- include("../partials/head") %>
+</head>
+<body>
+
+	<%- include("../partials/header") %>
+	
+	<div class="hero-area hero-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-9 offset-lg-2 text-center">
+					<div class="hero-text">
+						<div class="hero-text-tablecell">
+							<p class="subtitle">Fırst Project</p>
+							<h2 style="color:white">Basic Blog Site With Admin Panel</h2>
+							<div class="hero-btns">
+								<a href="/user/blog-list" class="boxed-btn">Blogs</a>
+								<!-- <a href="contact.html" class="bordered-btn">Contact Us</a> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="latest-news pt-150 pb-150">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="section-title">	
+						<h3><span class="orange-text">Latest</span> Blog Posts</h3>
+						<p>Explore our most recent blog posts and discover valuable information on topics that matter to you.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<% blogs.forEach(blog => { %>			
+					<div class="col-lg-4 col-md-6">
+						<div class="single-latest-news">
+							<a href="/blog/<%= blog.slug %>"><div class="latest-news-bg news-bg-1"><img style="height: 200px"src="/static/assets/img/blog-image/<%= blog.image %>" alt=""></div></a>
+							<div class="news-text-box">
+								<h3><a href="/blog/<%= blog.slug %>"><%= blog.title %></a></h3>
+								<p class="blog-meta">
+								</p>
+								<p class="excerpt"><%= blog.subtitle %></p>
+								<a href="/blog/<%= blog.slug %>" class="read-more-btn">Read More<i class="fas fa-angle-right"></i></a>
+							</div>
+						</div>
+					</div>
+				<% }) %>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<a href="/blog-list" class="boxed-btn">More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<%- include("../partials/footer") %>
+	
+	<%- include("../partials/script") %>
+</body>
+</html>

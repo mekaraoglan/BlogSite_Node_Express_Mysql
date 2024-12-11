@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+	<%- include("../partials/head") %>
+</head>
+<body>
+
+	<%- include("../partials/header") %>
+	
+    <div class="latest-news mt-150 mb-150">
+		<div class="container">
+			<div class="row">
+				<% blogs.forEach(blog => { %>
+				<div class="col-lg-4 col-md-6">
+					<div class="single-latest-news">
+						<a href="/blog/<%= blog.slug %>"><div class="latest-news-bg news-bg-1"><img style="height: 200px"src="/static/assets/img/blog-image/<%= blog.image %>" alt=""></div></a>
+						<div class="news-text-box">
+							<h3><a href="/blog/<%= blog.slug %>"><%= blog.title %></a></h3>
+							<p class="blog-meta">
+							</p>
+							<p class="excerpt"><%= blog.subtitle %></p>
+							<a href="/blog/<%= blog.slug %>" class="read-more-btn">Read More<i class="fas fa-angle-right"></i></a>
+						</div>
+					</div>
+				</div>
+				<% }) %>
+			</div>
+		</div>
+	</div>
+	<!-- end latest news -->
+	<%- include("../partials/footer") %>
+	
+	<%- include("../partials/script") %>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+	<%- include("../partials/head") %>
+    
+</head>
+<body>
+
+	<%- include("../partials/header") %>
+	
+    <div class="col-md-5" style="margin: 130px 0px 150px 240px">
+        <h1 class="mb-4">Login</h1>
+        <form method="POST">
+            <div class="mb-3">
+                <label for="title" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="subtitle" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+            <% if (typeof message != "undefined") { %>
+                <div class="alert alert-danger" style="margin-top: 10px">
+                    <%= message %> 
+                </div>
+            <% } %>
+        </form>
+    </div>
+    
+	<%- include("../partials/footer") %>
+	
+	<%- include("../partials/script") %>
+
+</body>
+</html>

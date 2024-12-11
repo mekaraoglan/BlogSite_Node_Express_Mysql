@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+	<%- include("../partials/head") %>
+    
+</head>
+<body>
+
+	<%- include("../partials/header") %>
+	
+    <div class="col-md-8" style="margin: 130px 0px 150px 240px">
+        <h1 class="mb-4">Edit User - <%= user.fullname %></h1>
+        <form method="POST">
+            <div class="mb-3">
+                <input type="hidden" name="userid" value="<%= user.id %>" required>
+                <label for="subtitle" class="form-label">Name</label>
+                <input type="name" class="form-control" id="name" name="name" value="<%= user.fullname %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="title" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" name="email" value="<%= user.email %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="text" class="form-control" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Edit</button>
+        </form>
+    </div>
+    
+	<%- include("../partials/footer") %>
+	
+	<%- include("../partials/script") %>
+
+</body>
+</html>

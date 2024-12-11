@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <%- include("../partials/head") %>
+
+</head>
+
+<body>
+
+    <%- include("../partials/header") %>
+
+    <div class="col-md-8" style="margin: 130px 0px 150px 240px"  style="background-color: #051922; height: 100px;">
+        <nav class="navbar navbar-expand-lg navbar-dark mb-4" style="height: 100px;">
+            <div class="container-fluid" style="background-color: #051922;">
+                <h1 class="navbar-brand">Admin Panel</h1>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                 <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">User List</h5>
+                            <a href="/admin/user-list" class="btn btn-primary" style="background-color: #F28123; color:#051922">Git</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Create User</h5>
+                            <a href="/admin/create-user" class="btn btn-primary" style="background-color: #F28123; color:#051922">Git</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Blog List</h5>
+                            <a href="/admin/blog-list" class="btn btn-primary" style="background-color: #F28123; color:#051922">Git</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Create Blog</h5>
+                            <a href="/admin/blog-create" class="btn btn-primary" style="background-color: #F28123; color:#051922">Git</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <%- include("../partials/footer") %>
+
+            <%- include("../partials/script") %>
+
+</body>
+
+</html>
