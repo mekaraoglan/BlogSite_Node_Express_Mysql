@@ -51,6 +51,6 @@ app.use(userRoutes);
     await dummyData();
 })();
 
-app.listen(3002, function() {
+app.listen(3000, function() {
     console.log("listening on port 3000");
 });
